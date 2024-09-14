@@ -19,6 +19,18 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
+gem 'sorcery'
+
+gem "sassc-rails"
+
+#search function
+gem 'ransack'
+
+#pagenation
+gem 'kaminari'
+
+gem 'bootstrap5-kaminari-views'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -37,6 +49,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem 'pry-rails'
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
@@ -49,6 +62,8 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
+  gem 'letter_opener_web'
+  
   # Highlight the fine-grained location where an error occurred [https://github.com/ruby/error_highlight]
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
@@ -58,3 +73,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'rails-i18n', '~> 7.0.0'
+
+gem 'draper', '4.0.2'
+
+gem 'carrierwave', '2.2.2'

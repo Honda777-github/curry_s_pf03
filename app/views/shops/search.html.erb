@@ -1,0 +1,31 @@
+
+<h1>検索結果</h1>
+  <table class="contener">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Description</th>
+        <th>Rating</th>
+        <th>Hot_rank</th>
+        <th>Category</th>
+        <th>Link</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @results.each do |shop| %>
+        <tr>
+          <td><%= shop.name %></td>
+          <td><%= shop.address %></td>
+          <td><%= shop.description %></td>
+          <td><%= shop.rating %></td>
+          <td><%= shop.hot_rank %></td>
+          <td><%= shop.category %></td>
+          <td><%= link_to "Show", shop %></td>
+          <td><%= link_to 'Edit', edit_shop_path(shop) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

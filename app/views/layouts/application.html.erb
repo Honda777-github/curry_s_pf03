@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Curry S Pf03" %></title>
+    <title><%= content_for(:title) || "カレー検索アプリ" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -13,11 +13,29 @@
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+
+  <div>
+    <p id="notice"><%= flash[:notice] %></p>
+    <p id="alert"><%= flash[:alert] %></p>
+  </div>
+    
+  <div class="container-fluid">
+    <div class="contener">
+      <% if logged_in? %>
+        <%= render 'shared/header' %>
+      <% else %>
+        <%= render 'shared/before_login_header' %>
+      <% end %>
+      <%= render 'shared/flash_message' %>
+      <%= yield %>
+      <%= render 'shared/footer' %>
+    </div>
+  </div>
+
   </body>
 </html>

@@ -1,0 +1,29 @@
+<div class="mx-auto md:w-2/3 w-full flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+    <% end %>
+
+    <%= render @shop %>
+
+    <%= link_to "お店の編集", edit_shop_path(@shop), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "お店一覧に戻る", shops_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <div class="inline-block ml-2">
+      <%= button_to "一覧から削除する", @shop, method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    </div>
+  </div>
+</div>
+<%= render 'comments/form', comment: @comment,shop: @shop %>
+<div class="comment_box">
+<p>コメント一覧</p>
+  <div class="col-lg-8 offset-lg-2">
+    <table class="table">
+      <tbody id="table-comment">
+        <!-- コメントの一覧表示 -->
+        <% @shop.comments.each do |comment| %>
+          <p>辛さ：<%= comment.hot_rank %> - コメント：<%= comment.content %> - ユーザー：<%= comment.user.name %></p>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
