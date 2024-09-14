@@ -15,9 +15,6 @@
       <%= f.submit '検索' %>
     <% end %>
     <h1 class="font-bold text-4xl">お店一覧</h1>
-    <div class="flex justify-between items-center">
-    <%= link_to "お店の新規登録", new_shop_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
-    </div>
     <ul>
       <% @shops.each do |shop| %>
         <li><%= shop.name %> - <%= link_to "お店情報", shop, class:"shop_link" %></li>
