@@ -7,14 +7,26 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-shops = [
-  { name: 'ガラム・マサラ', address: '北海道札幌市中央区南1条西27丁目1-1', description: 'ダミーデータ', rating: 5, hot_rank: 1, img: "", category: "currymix" },
-  { name: 'コリアンダ', address: '北海道札幌市中央区西1条西2丁目1-5', description: 'ダミーデータ', rating: 3, hot_rank: 1, img: "", category: "currymix" },
-  { name: '札幌スープカレー', address: '北海道札幌市東区北31条東15-1-1', description: 'ダミーデータ', rating: 5, hot_rank: 2, img: "", category: "soup"  },
-  { name: 'スープカレーhot', address: '北海道札幌市東区北3条5丁目2-3', description: 'ダミーデータ', rating: 5, hot_rank: 2, img: "", category: "soup"  },
-  { name: 'チキンカリーbard', address: '北海道札幌市南区6条2-1-1', description: 'ダミーデータ', rating: 5, hot_rank: 2, img: "", category: "currymix"  },
-  { name: 'イエローカレー', address: '北海道札幌市東区東苗穂2条3-1-1', description: 'ダミーデータ', rating: 5, hot_rank: 5, img: "", category: "soup" },
-  { name: 'グリーンーカレー', address: '北海道札幌市東区2条3-1', description: 'ダミーデータ', rating: 5, hot_rank: 5, img: "", category: "soup" },
-  { name: 'マンモスカレー', address: '北海道札幌市中央区東3条3-1-2', description: 'ダミーデータ', rating: 5, hot_rank: 5, img: "", category: "currymix" }
-]
-Shop.create(shops)
+Shop.create!(
+  name: "ガラム・マサラ", address: "北海道札幌市中央区南1条西27丁目1-1", description: "ダミーデータ", rating: 5, hot_rank: 1, img: "", category: "currymix"
+)
+
+Shop.create!( name: "コリアンダ", address: "北海道札幌市中央区西1条西2丁目1-5", description: "ダミーデータ", rating: 3, hot_rank: 1, img: "", category: "currymix"
+  )
+
+  Shop.create!( name: "札幌スープカレー", address: "北海道札幌市東区北31条東15-1-1", description: "ダミーデータ", rating: 5, hot_rank: 2, img: "", category: "soup"
+  )
+
+  Shop.create!( name: "スープカレーhot", address: "北海道札幌市東区北3条5丁目2-3", description: "ダミーデータ", rating: 5, hot_rank: 2, img: "", category: "soup"
+  )
+
+  Shop.create!( name: "チキンカリーbard", address: "北海道札幌市南区6条2-1-1", description: "ダミーデータ", rating: 5, hot_rank: 2, img: "", category: "currymix"
+  )
+  Shop.create!( name: "イエローカレー", address: "北海道札幌市東区東苗穂2条3-1-1", description: "ダミーデータ", rating: 5, hot_rank: 5, img: "", category: "soup"
+  )
+
+  Shop.create!( name: "グリーンーカレー", address: "北海道札幌市東区2条3-1", description: "ダミーデータ", rating: 5, hot_rank: 5, img: "", category: "soup"
+  )
+
+  Shop.create!( name: "マンモスカレー", address: "北海道札幌市中央区東3条3-1-2", description: "ダミーデータ", rating: 5, hot_rank: 5, img: "", category: "currymix"
+  )
