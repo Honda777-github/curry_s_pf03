@@ -96,6 +96,10 @@ textarea {
   flex-direction: column;
   justify-content: space-around;
 }
+.contener_item {
+  padding-bottom: 24px;
+}
+
 .contener img {
   margin:  0 auto;
   display: block;
@@ -247,6 +251,11 @@ textarea {
   color: #BF0000;
   text-decoration: underline;
 }
+.shop_content {
+  padding-top: 24px 16px !important;
+  padding-bottom: 24px 16px !important;
+}
+
 
 .a_link {
   color: #ceb849;
